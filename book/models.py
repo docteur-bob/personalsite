@@ -8,7 +8,7 @@ class Page_projet(models.Model):
 	text = models.TextField(blank=True)
 	tag = models.CharField(max_length=200)
 	description = models.TextField(default="")
-	img_description = models.ImageField(upload_to = 'static/images/description_projets/', default = 'static/images/description_projets/no-img.jpg')
+	img_description = models.ImageField(upload_to = 'book/static/images/description_projets/', default = 'book/static/images/description_projets/no-img.jpg')
 
 
 	def __str__(self):
