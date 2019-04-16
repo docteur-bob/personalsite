@@ -1,0 +1,11 @@
+{% extends 'book/base.html' %}
+{%block content1%}
+<div class="row prjwrapper">
+	<div class="col-md-5 offset-md-3 ">
+		<h2> {{projets.titre}} </h2>
+		<p>
+			{{projets.text|linebreaksbr}}
+		</p>	
+	</div>
+</div>
+{%endblock%}

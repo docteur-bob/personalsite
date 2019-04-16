@@ -1,0 +1,11 @@
+{% load static %}
+			<h2 class="titre_timeline text-center">Curriculum Vitae</h2>
+			<ul class="timeline">
+				{% for bio in cv %}
+				<li style="margin-bottom:50px;">
+					<p class="date_poste float-right">{{bio.date}}</p>
+					<h5 class="titre_poste">{{bio.entreprise}}</h5>
+					<p class="des_poste"><span class="entreprise">{{bio.poste}}__</span> {{bio.poste_descrip}}</p>
+				</li>
+				{% endfor %}
+			</ul>
