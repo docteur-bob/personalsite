@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row">
     {% for projet in projets %}
-    <div id="projet_{{projet.tag}}" class="projet col-sm-12 col-md-6 col-lg-4" style="padding:20px 40px;">
+    <div id="projet_{{projet.tag}}" class="projet col-xs-12 col-sm-6 col-lg-4" style="padding:20px 40px;">
 		<h3 style="text-align:center;padding-bottom:10px"><a href="{% url 'page_projet' tag=projet.tag %}">{{projet.titre}}</a></h3>
 		<div style="height:100px; margin:0 auto;background-image:url({{projet.img_description.url}}); background-position:center;background-size: cover;"></div>
 		<p style="padding:10px 0;font-size:0.95em;">{{projet.description}}</p>
