@@ -23,9 +23,9 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'qy%$ik$by$xqj_(q)*y7)70u60us&1ltontflon+6)$4l3ug^u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [docteurbob.pythonanywhere.com]
+ALLOWED_HOSTS = []
 
 
 # Application definition
