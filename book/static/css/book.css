@@ -4,7 +4,7 @@
 
 body {
 	font-family:"open sans" ;
-	font-size:1.1em;
+	font-size:1.15em;
 	
 }
 
@@ -150,13 +150,13 @@ ul.timeline > li:before {
 	}
 
 .prjwrapper h2 {
-	font-size: 50px;
+	font-size: 3em;
 	margin-bottom:50px;
 
 }
 
 .prjwrapper p {
-	font-size:20px;
+	font-size:1.3em;
 	margin-top:10px;
 }
 
