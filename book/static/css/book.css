@@ -187,7 +187,6 @@ ul.timeline > li:before {
 	border:solid 3px black;
 }
 
-.gainskills p {
-	font-family:consolas;
+.gainskills li {
 	font-size:20px;
 }
