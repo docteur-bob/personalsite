@@ -160,7 +160,7 @@ ul.timeline > li:before {
 	margin-top:10px;
 }
 
-.prjwrapper li {
+.prjwrapper ul,li {
 	font-size:20px;
 }
 
