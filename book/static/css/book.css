@@ -162,6 +162,7 @@ ul.timeline > li:before {
 
 .prjwrapper ul,li {
 	font-size:20px;
+	font-family:consolas;
 }
 
 .titre_timeline {
