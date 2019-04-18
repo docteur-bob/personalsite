@@ -160,6 +160,10 @@ ul.timeline > li:before {
 	margin-top:10px;
 }
 
+.prjwrapper ul {
+	list-style: square inside;
+}
+
 
 .titre_timeline {
 	margin-bottom: 50px;
@@ -180,13 +184,4 @@ ul.timeline > li:before {
 .date_poste {
 	font-family: "Rajdhani";
 	color:#CCCCCC;
-}
-
-.gainskills {
-	background-color:lightgrey;
-	border:solid 3px black;
-}
-
-.gainskills ul {
-	list-style:square inside;
 }
