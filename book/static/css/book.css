@@ -13,7 +13,8 @@ p .serif {
 }
 
 h1 {
-	font-family:"Pacifico";
+	font-family:"Merriweather sans";
+	letter-spacing: 3px;
 	color:#142b33;
 	margin-top:5px;
 	letter-spacing: -2px;
@@ -31,13 +32,17 @@ h1 a:hover {
 }
 
 h2 {
-	font-family:"Share";
+	font-family:"Open sans";
 	font-weight:bold;
 	color:#142b33;
 }
 
+.head h2 {
+	font-size:2.1em;
+}
+
 h3 a {
-	font-family:"Share";
+	font-family:"Open sans";
 	font-weight:bold;
 	color:#142b33;
 }
@@ -49,7 +54,7 @@ h3 a:hover {
 }
 
 h3 {
-	font-family:"Share";
+	font-family:"Open sans";
 	font-weight:bold;
 }
 
@@ -152,13 +157,11 @@ ul.timeline > li:before {
 .prjwrapper h2 {
 	font-size: 3em;
 	margin-bottom:50px;
-
 }
 
 .prjwrapper h2 {
 	font-size: 3em;
 	margin-bottom:50px;
-
 }
 
 .prjwrapper h3 {
@@ -194,4 +197,30 @@ ul.timeline > li:before {
 .date_poste {
 	font-family: "Rajdhani";
 	color:#CCCCCC;
+}
+
+.titre_partie_skill{
+	margin-bottom:20px;
+	font-family:'abel'; 
+	font-size:2.5em; 
+	font-weight: bold; 
+	letter-spacing: 5px;
+}
+
+.img_skill{
+	max-width: 120px;
+	padding:20px;
+	margin-bottom:10px;
+	border-radius:500px;
+	background-color: #F5F5F5;
+}
+
+.titre_skill {
+	font-family:'open sans'; 
+	font-size:1.15em;
+}
+
+.desc_skill {
+	font-size:0.8em;
+	color:#777;
 }

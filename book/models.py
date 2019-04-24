@@ -22,3 +22,11 @@ class Curivitae(models.Model):
 
 	def __str__(self):
 		return self.entreprise
+
+class Skill(models.Model):
+	nom = models.CharField(max_length=100)
+	description = models.CharField(max_length=100)
+	img = models.FileField(upload_to = 'image_skills/', default = 'image_skills/no-img.jpg')
+
+	def __str__(self):
+		return self.nom

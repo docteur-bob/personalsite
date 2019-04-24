@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+    	<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>mehdiaoussat.fr - UX Researcher et Psychologie Expérimentale</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="{% static 'css/book.css' %}">
+        
+        <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+    </head>
+	<body>
+        <div class="container">
+            <h1>SUS Item Benchmark</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="Submit">Submit</button>
+            </form>
+            <h2>{{ text }}</h2>
+        </div>
+	</body>
+</html>

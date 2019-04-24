@@ -1,0 +1,15 @@
+{% load static %}
+<div class="row">
+	<div class="col-12 text-center">
+		<h2 class="titre_partie_skill">Compétences clés</h2>
+	</div>
+</div>
+<div class="row">
+	{% for i in skill %}
+	<div class="text-center col-xs-12 col-sm-6 col-lg-4" style="padding:50px;">
+		<img class="img-fluid img_skill" src="{{i.img.url}}" />
+		<h3 class="text-left titre_skill">{{ i.nom }}</h3>
+		<p class="text-left desc_skill">{{ i.description }}</p>
+	</div>
+	{% endfor %}
+</div>
