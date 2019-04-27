@@ -120,6 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+### Recommandation : "static" et "media" à la racine du projet. Et dans les app faire "static/book/fichier.ex"
 STATIC_ROOT  =   os.path.join(BASE_DIR, 'book/static')
 STATIC_URL = '/static/'
 
