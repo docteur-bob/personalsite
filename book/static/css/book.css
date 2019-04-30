@@ -221,12 +221,13 @@ ul.timeline > li:before {
 }
 
 .prjwrapper p {
-	font-size:1.3em;
+	font-size:1.2em;
 	margin-top:10px;
 }
 
 .prjwrapper ul {
 	list-style: square inside;
+	font-size:1.1em;
 }
 
 
