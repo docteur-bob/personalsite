@@ -3,26 +3,71 @@
     <head>
     	<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
         
         <title>mehdiaoussat.fr - UX Researcher et Psychologie Expérimentale</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
-        <link rel="stylesheet" href="{% static 'css/book.css' %}">
-        
         <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+         <link rel="stylesheet" href="{% static 'css/sus.css' %}">
     </head>
 	<body>
-        <div class="container">
+        <div class="container main">
             <h1>SUS Item Benchmark</h1>
-            <form method="post">
-                {% csrf_token %}
-                {{form.as_p}}
-                <button type="Submit">Submit</button>
-            </form>
-            <h2>{{ text }}</h2>
+            <hr class="col-5" style="margin-left:0px"/>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Note Globale</p></div>
+                        <div class="col-2">{{form.note_globale}}</div>
+                    </div>
+                    <hr class="col-5" style="margin-left:0px"/>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 1</p></div>
+                        <div class="col-2">{{form.item_1}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 2</p></div>
+                        <div class="col-2">{{form.item_2}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 3</p></div>
+                        <div class="col-2">{{form.item_3}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 4</p></div>
+                        <div class="col-2">{{form.item_4}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 5</p></div>
+                        <div class="col-2">{{form.item_5}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 6</p></div>
+                        <div class="col-2">{{form.item_6}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 7</p></div>
+                        <div class="col-2">{{form.item_7}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 8</p></div>
+                        <div class="col-2">{{form.item_8}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 9</p></div>
+                        <div class="col-2">{{form.item_9}}</div>
+                    </div>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="col-3"><p style="margin:auto;">Item 10</p></div>
+                        <div class="col-2">{{form.item_6}}</div>
+                    </div>
+                    <hr class="col-5" style="margin-left:0px"/>
+                    <button type="Submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
 	</body>
 </html>

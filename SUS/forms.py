@@ -1,14 +1,58 @@
 from django import forms
 
 class Formulaire(forms.Form):
-	note_globale = forms.CharField()
-	item_1 = forms.FloatField()
-	item_2 = forms.FloatField()
-	item_3 = forms.FloatField()
-	item_4 = forms.FloatField()
-	item_5 = forms.FloatField()
-	item_6 = forms.FloatField()
-	item_7 = forms.FloatField()
-	item_8 = forms.FloatField()
-	item_9 = forms.FloatField()
-	item_10 = forms.FloatField()
+	note_globale = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_1 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_2 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_3 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_4 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_5 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_6 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_7 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_8 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_9 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))
+	item_10 = forms.FloatField(widget=forms.NumberInput(
+		attrs={
+		'class' : 'form-control',
+		}
+		))

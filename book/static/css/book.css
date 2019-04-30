@@ -58,7 +58,64 @@ h3 {
 	font-weight:bold;
 }
 
+.bouton {
+	padding:6px 10px;
+	margin:0 10px;
+	display: inline-flex;
+	border-radius: 10px;
+}
 
+.emailbtn {
+	color:white;
+	background-color:#fbaf08;
+	border:solid #fbaf08;
+}
+
+.emailbtn:hover {
+	background-color:#fcbf19;
+	border:solid #fcbf19;
+
+}
+
+.emailbtn:active {
+	background-color:#fcbf19;
+	border:solid #fdcf2A;
+
+}
+
+
+.linkedinbtn {
+	color:white;
+	border:solid #101357;
+	background-color:#101357;
+}
+
+.linkedinbtn:hover {
+	background-color: #212468;
+	border:solid #212468;
+}
+
+.linkedinbtn:active {
+	background-color:#212468;
+	border:solid #43469A;
+}
+
+
+.githubbtn {
+	color:white;
+	border:solid grey;
+	background-color:grey;
+}
+
+.githubbtn:hover {
+	background-color: darkgrey;
+	border:solid darkgrey;
+}
+
+.githubbtn:active {
+	background-color:darkgrey;
+	border:solid lightgrey;
+}
 
 .fondhead {
 	background-color:#F0F0F0;

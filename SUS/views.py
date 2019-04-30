@@ -1,10 +1,12 @@
 from django.shortcuts import render,get_object_or_404
 from SUS.forms import Formulaire
+from lib.SUS import Rang_sus
 from django.views.generic import TemplateView
 
 # Create your views here.
 class SUShome(TemplateView):
 	template_name = "SUS/formulaire.html"
+	template_res = "SUS/result.html"
 	
 	def get(self, request):
 		form = Formulaire()
@@ -13,7 +15,7 @@ class SUShome(TemplateView):
 	def post(self, request):
 		form = Formulaire(request.POST)
 		if form.is_valid():
-			ng = form.cleaned_data['note_globale']
+			ng = Rang_sus(float(form.cleaned_data['note_globale']))
 			i1 = form.cleaned_data['item_1']
 			i2 = form.cleaned_data['item_2']
 			i3 = form.cleaned_data['item_3']
@@ -24,6 +26,7 @@ class SUShome(TemplateView):
 			i8 = form.cleaned_data['item_8']
 			i9 = form.cleaned_data['item_9']
 			i10 = form.cleaned_data['item_10']
+
 
 
 
@@ -42,4 +45,4 @@ class SUShome(TemplateView):
 				}
 
 		
-		return render(request, self.template_name, args)
+		return render(request, self.template_res, args)
