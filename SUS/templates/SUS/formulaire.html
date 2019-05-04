@@ -19,6 +19,8 @@
             <hr class="col-5" style="margin-left:0px"/>
                 <form method="post">
                     {% csrf_token %}
+                    <!-- {{form}} -->
+                    
                     <div class="row" style="padding:10px 0;">
                         <div class="col-3"><p style="margin:auto;">Note Globale</p></div>
                         <div class="col-2">{{form.note_globale}}</div>
@@ -62,8 +64,9 @@
                     </div>
                     <div class="row" style="padding:10px 0;">
                         <div class="col-3"><p style="margin:auto;">Item 10</p></div>
-                        <div class="col-2">{{form.item_6}}</div>
+                        <div class="col-2">{{form.item_10}}</div>
                     </div>
+
                     <hr class="col-5" style="margin-left:0px"/>
                     <button type="Submit" class="btn btn-primary">Submit</button>
                 </form>
