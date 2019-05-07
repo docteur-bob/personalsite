@@ -66,7 +66,7 @@ class Item(object):
           self.SUS = SUS
           self.rangSUS = rangSUS
           self.inv = inv
-          if self.inv == "on":
+          if self.inv == "off":
             self.note = 6 - self.note
 
           if self.number == 1:
