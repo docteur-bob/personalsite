@@ -17,7 +17,7 @@ class Formulaire(forms.Form):
 		}
 		))
 
-	item_2_inv = forms.BooleanField()
+	item_2_inv = forms.BooleanField(required=False)
 
 	item_3 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
@@ -30,7 +30,7 @@ class Formulaire(forms.Form):
 		}
 		))
 	
-	item_4_inv = forms.BooleanField()
+	item_4_inv = forms.BooleanField(required=False)
 
 	item_5 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
@@ -44,7 +44,7 @@ class Formulaire(forms.Form):
 		}
 		))
 
-	item_6_inv = forms.BooleanField()
+	item_6_inv = forms.BooleanField(required=False)
 
 	item_7 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
@@ -58,7 +58,7 @@ class Formulaire(forms.Form):
 		}
 		))
 
-	item_8_inv = forms.BooleanField()
+	item_8_inv = forms.BooleanField(required=False)
 
 	item_9 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
@@ -72,5 +72,5 @@ class Formulaire(forms.Form):
 		}
 		))
 
-	item_10_inv = forms.BooleanField()
+	item_10_inv = forms.BooleanField(required=False)
 

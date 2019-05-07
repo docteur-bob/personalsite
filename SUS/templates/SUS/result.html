@@ -23,7 +23,7 @@
             {{ ng.comment }}</p>
             {% for x in lst_item %}
             <h3>Item {{x.number}}</h3>
-            <p>{{x.commentitem}}<br> {{x.precision}}</p>
+            <p>{{x.commentitem | safe}}<br> {{x.precision | safe}}</p>
             {% endfor %}
         </div>
 	</body>

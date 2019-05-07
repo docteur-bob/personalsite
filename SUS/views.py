@@ -16,15 +16,15 @@ class SUShome(TemplateView):
 		form = Formulaire(request.POST)
 		if form.is_valid():
 			ng = Rang_sus(float(form.cleaned_data['note_globale']))
-			i1 = Item(float(form.cleaned_data['item_1']), 1, ng.note, ng.rang,"off")
+			i1 = Item(float(form.cleaned_data['item_1']), 1, ng.note, ng.rang,False)
 			i2 = Item(float(form.cleaned_data['item_2']), 2, ng.note, ng.rang, form.cleaned_data['item_2_inv'])
-			i3 = Item(float(form.cleaned_data['item_3']), 3, ng.note, ng.rang, "off")
+			i3 = Item(float(form.cleaned_data['item_3']), 3, ng.note, ng.rang, False)
 			i4 = Item(float(form.cleaned_data['item_4']), 4, ng.note, ng.rang, form.cleaned_data['item_4_inv'])
-			i5 = Item(float(form.cleaned_data['item_5']), 5, ng.note, ng.rang, "off")
+			i5 = Item(float(form.cleaned_data['item_5']), 5, ng.note, ng.rang, False)
 			i6 = Item(float(form.cleaned_data['item_6']), 6, ng.note, ng.rang, form.cleaned_data['item_6_inv'])
-			i7 = Item(float(form.cleaned_data['item_7']), 7, ng.note, ng.rang, "off")
+			i7 = Item(float(form.cleaned_data['item_7']), 7, ng.note, ng.rang, False)
 			i8 = Item(float(form.cleaned_data['item_8']), 8, ng.note, ng.rang, form.cleaned_data['item_8_inv'])
-			i9 = Item(float(form.cleaned_data['item_9']), 9, ng.note, ng.rang, "off")
+			i9 = Item(float(form.cleaned_data['item_9']), 9, ng.note, ng.rang, False)
 			i10 = Item(float(form.cleaned_data['item_10']), 10, ng.note, ng.rang, form.cleaned_data['item_10_inv'])
 			lst_item = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
 

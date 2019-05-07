@@ -66,7 +66,7 @@ class Item(object):
           self.SUS = SUS
           self.rangSUS = rangSUS
           self.inv = inv
-          if self.inv == "off":
+          if self.inv == True:
             self.note = 6 - self.note
 
           if self.number == 1:
@@ -109,16 +109,15 @@ class Item(object):
               if self.note > self.prdt_note:
                   self.commentitem = "Votre systeme est mieux perçu sur cet item ! \n + {} que la moyenne des systèmes ayant le même score SUS ({})".format(round(self.note-self.prdt_note,2),round(self.SUS,2))
                   if new_rank.rang == "F":
-                      self.precision = "La note a cet item correspond à un system noté colored({}) ({}, < {})".format(self.prdt_SUS,new_rank.rang,new_rank.percentile)
+                      self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, < {})".format(self.prdt_SUS,new_rank.color,new_rank.rang,new_rank.percentile)
                   else:
-                      self.precision = "La note a cet item correspond à un system noté colored({}) ({}, > {})".format(self.prdt_SUS, new_rank.rang,
-                                                                                                          new_rank.percentile)
+                      self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, > {})".format(self.prdt_SUS,new_rank.color, new_rank.rang,new_rank.percentile)
               elif self.note < self.prdt_note:
                   self.commentitem = "Votre system est moins bien perçu sur cet item... \n {} que la moyenne des systèmes ayant le même score SUS ({})".format(round(self.note-self.prdt_note,2),round(self.SUS,2))
                   if new_rank.rang == "F":
-                      self.precision = "La note a cet item correspond à un system noté colored({}) ({}, < {})".format(self.prdt_SUS,new_rank.rang,new_rank.percentile)
+                      self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, < {})".format(self.prdt_SUS,new_rank.color,new_rank.rang,new_rank.percentile)
                   else:
-                      self.precision = "La note a cet item correspond à un system noté {} ({}, > {})".format(self.prdt_SUS,new_rank.rang,new_rank.percentile)
+                      self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, > {})".format(self.prdt_SUS,new_rank.color,new_rank.rang,new_rank.percentile)
               else:
                   self.commentitem = "La note est dans la moyenne"
 
@@ -127,16 +126,15 @@ class Item(object):
               if self.note > self.prdt_note:
                 self.commentitem = "Votre system est moins bien perçu sur cet item... \n +{} que la moyenne des systèmes ayant le même score SUS ({})".format(round(self.note-self.prdt_note,2),round(self.SUS,2))
                 if new_rank.rang == "F":
-                    self.precision = "La note a cet item correspond à un system noté colored({}) ({}, < {})".format(self.prdt_SUS, new_rank.rang,new_rank.percentile)
+                    self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, < {}) C'est un item inversé. Une différence positive montre une moins bonne utilisabilité perçue.".format(self.prdt_SUS,new_rank.color, new_rank.rang,new_rank.percentile)
                 else:
-                    self.precision = "La note a cet item correspond à un system noté {} ({}, > {})".format(self.prdt_SUS,new_rank.rang,new_rank.percentile)
-                print("C'est un item inversé. Une différence positive montre une moins bonne utilisabilité perçue.")
+                    self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, > {}) C'est un item inversé. Une différence positive montre une moins bonne utilisabilité perçue.".format(self.prdt_SUS,new_rank.color, new_rank.rang,new_rank.percentile)
               elif self.note < self.prdt_note:
                 self.commentitem = "Votre systeme est mieux perçu sur cet item ! \n {} que la moyenne des systèmes ayant le même score SUS ({})".format(round(self.note-self.prdt_note,2),round(self.SUS,2))
                 if new_rank.rang == "F":
-                    self.precision = "La note a cet item correspond à un system noté colored({}) ({}, < {}) \n \n C'est un item inversé. Une différence négative montre une meilleure utilisabilité perçue.".format(self.prdt_SUS, new_rank.rang,new_rank.percentile)
+                    self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, < {}) \n \n C'est un item inversé. Une différence négative montre une meilleure utilisabilité perçue.".format(self.prdt_SUS,new_rank.color, new_rank.rang,new_rank.percentile)
                 else:
-                    self.precision = "La note a cet item correspond à un system noté {} ({}, > {}) \n \n C'est un item inversé. Une différence négative montre une meilleure utilisabilité perçue.".format(self.prdt_SUS,new_rank.rang,new_rank.percentile)
+                    self.precision = "La note a cet item correspond à un system noté {} (<b><span style='color:{}'>{}</span></b>, > {}) \n \n C'est un item inversé. Une différence négative montre une meilleure utilisabilité perçue.".format(self.prdt_SUS,new_rank.color, new_rank.rang,new_rank.percentile)
               else:
                 self.commentitem = "La note est dans la moyenne"
  
