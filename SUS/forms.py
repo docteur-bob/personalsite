@@ -16,6 +16,9 @@ class Formulaire(forms.Form):
 		'class' : 'form-control',
 		}
 		))
+
+	item_2_inv = forms.BooleanField()
+
 	item_3 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
@@ -26,33 +29,48 @@ class Formulaire(forms.Form):
 		'class' : 'form-control',
 		}
 		))
+	
+	item_4_inv = forms.BooleanField()
+
 	item_5 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
 	item_6 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
+	item_6_inv = forms.BooleanField()
+
 	item_7 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
 	item_8 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
+	item_8_inv = forms.BooleanField()
+
 	item_9 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
 	item_10 = forms.FloatField(widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
+
+	item_10_inv = forms.BooleanField()
+

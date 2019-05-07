@@ -21,7 +21,10 @@
             <p>Note : {{ ng.note }}<br/>
             Rang : <span style="color: {{ ng.color }}; font-weight:bold;">{{ ng.rang }}</span><br/>
             {{ ng.comment }}</p>
-
+            {% for x in lst_item %}
+            <h3>Item {{x.number}}</h3>
+            <p>{{x.commentitem}}<br> {{x.precision}}</p>
+            {% endfor %}
         </div>
 	</body>
 </html>
