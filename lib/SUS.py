@@ -5,57 +5,57 @@ class Rang_sus(object):
           self.rang = "A+"
           self.percentile = "96%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "darkgreen"
+          self.color = "#00FF00"
       elif self.note > 80.7:
           self.rang = "A"
           self.percentile = "90%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "green"
+          self.color = "#35FF00"
       elif self.note > 78.8:
           self.rang = "A-"
           self.percentile = "85%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#6AFF00"
       elif self.note > 77.1:
           self.rang = "B+"
           self.percentile = "80%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#9FFF00"
       elif self.note > 74.0:
           self.rang = "B"
           self.percentile = "70%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#D4FF00"
       elif self.note > 72.5:
           self.rang = "B-"
           self.percentile = "65%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"      
+          self.color = "#FFF600"      
       elif self.note > 71.0:
           self.rang = "C+"
           self.percentile = "60%"
-          self.color = "blue"
+          self.color = "#FFC100"
           self.comment = "L'utilisabilité perçue est supérieur à {} des systèmes évalués ".format(self.percentile)
       elif self.note > 64.9:
           self.rang = "C"
           self.percentile = "41%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "orange"
+          self.color = "#FF8C00"
       elif self.note > 62.6:
           self.rang = "C-"
           self.percentile = "35%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#FF5700"
       elif self.note > 51.6:
           self.rang = "D"
           self.percentile = "15%"
           self.comment = "L'utilisabilité perçue est supérieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#FF2300"
       else:
           self.rang = "F"
           self.percentile = "14%"
           self.comment = "L'utilisabilité perçue est inférieure à {} des systèmes évalués ".format(self.percentile)
-          self.color = "blue"
+          self.color = "#FF0000"
 
 
 
