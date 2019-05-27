@@ -274,6 +274,15 @@ ul.timeline > li:before {
 }
 
 .desc_skill {
-	font-size:0.8em;
+	font-size:0.9em;
 	color:#777;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height:300px;
+  margin:-0.5rem;
+  padding:35px;
+  display: inline-block;
 }

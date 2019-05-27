@@ -16,64 +16,81 @@
 	<body>
         <div class="container main">
             <h1>SUS Item Benchmark</h1>
-            <hr class="col-5" style="margin-left:0px"/>
-                <form method="post">
+            <hr class="" style="margin-left:0px"/>
+                <form method="post" class="container">
                     {% csrf_token %}
                     <!-- {{form}} -->
                     
                     <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Note Globale</p></div>
-                        <div class="col-2">{{form.note_globale}}</div>
-                    </div>
-                    <hr class="col-5" style="margin-left:0px"/>
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Note Globale</p>
+                            <div class="">{{form.note_globale}}</div>
+                        </div>
+                    </div></br>
+                    
+                    <hr class="" style="margin-left:0px"/>
+                    
                     <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 1</p></div>
-                        <div class="col-2">{{form.item_1}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 2</p></div>
-                        <div class="col-2">{{form.item_2}}</div>
-                        <div class="col-1">inversé ? {{form.item_2_inv}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 3</p></div>
-                        <div class="col-2">{{form.item_3}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 4</p></div>
-                        <div class="col-2">{{form.item_4}}</div>
-                        <div class="col-1">inversé ? {{form.item_4_inv}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 5</p></div>
-                        <div class="col-2">{{form.item_5}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 6</p></div>
-                        <div class="col-2">{{form.item_6}}</div>
-                        <div class="col-1">inversé ? {{form.item_6_inv}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 7</p></div>
-                        <div class="col-2">{{form.item_7}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 8</p></div>
-                        <div class="col-2">{{form.item_8}}</div>
-                        <div class="col-1">inversé ? {{form.item_8_inv}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 9</p></div>
-                        <div class="col-2">{{form.item_9}}</div>
-                    </div>
-                    <div class="row" style="padding:10px 0;">
-                        <div class="col-3"><p style="margin:auto;">Item 10</p></div>
-                        <div class="col-2">{{form.item_10}}</div>
-                        <div class="col-1">inversé ? {{form.item_10_inv}}</div>
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 1</p>
+                            <div class="">{{form.item_1}}</div>
+                        </div>
+                        <div class="col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 2</p>
+                            <div class="">{{form.item_2}}</div>
+                        </div>
                     </div>
 
-                    <hr class="col-5" style="margin-left:0px"/>
-                    <button type="Submit" class="btn btn-primary">Submit</button>
+                    <div class="row" style="padding:10px 0;">
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 3</p>
+                            <div class="">{{form.item_3}}</div>
+                        </div>
+                        <div class="col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 4</p>
+                            <div class="">{{form.item_4}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding:10px 0;">
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 5</p>
+                            <div class="">{{form.item_5}}</div>
+                        </div>
+                        <div class="col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 6</p>
+                            <div class="">{{form.item_6}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding:10px 0;">
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 7</p>
+                            <div class="">{{form.item_7}}</div>
+                        </div>
+                        <div class="col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 8</p>
+                            <div class="">{{form.item_8}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding:10px 0;">
+                        <div class="offset-md-1 col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 9</p>
+                            <div class="">{{form.item_9}}</div>
+                        </div>
+                        <div class="col-md-5 nomchamp">
+                            <p style="margin:auto;">Item 10</p>
+                            <div class="">{{form.item_10}}</div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row">
+                        <p class="offset-md-1 col-md-11">Les items pairs sont inversés ? {{form.item_inv}}
+                    </div>
+                    <div class="row">
+                        <div class="offset-md-10 col-md-2"><button type="Submit" class="btn btn-primary">Submit</button></div>
+                    </div>
                 </form>
             </div>
         </div>

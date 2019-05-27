@@ -1,16 +1,18 @@
 {% load static %}
-<div style="box-shadow: 5px 5px 10px rgba(255,255,255,0.2); padding:25px 0;background-color:rgba(255,255,255,0.5); border-radius: 25px;">
+<div style="">
 <div class="row">
 	<div class="col-12 text-center">
-		<h2 class="titre_partie_skill">Compétences clés</h2>
+		<h2 class="titre_partie_skill" style="margin-bottom:50px;">Ma toolbox</h2>
 	</div>
 </div>
-<div class="row">
+<div class="row" style="padding:auto;">
 	{% for i in skill %}
-	<div class="text-center col-xs-12 col-sm-6 col-lg-4" style="padding:50px;">
-		<img class="img-fluid img_skill" src="{{i.img.url}}" />
-		<h3 class="text-left titre_skill">{{ i.nom }}</h3>
-		<p class="text-left desc_skill">{{ i.description }}</p>
+	<div class="text-center col-xs-12 col-sm-6 col-lg-4" style="padding:1rem;">
+		<div class="card">
+			<img class="img-fluid img_skill" src="{{i.img.url}}" />
+			<h3 class="text-center titre_skill" style="margin:15px auto;">{{ i.nom }}</h3>
+			<p class="text-left desc_skill">{{ i.description }}</p>
+		</div>
 	</div>
 	{% endfor %}
 </div>

@@ -1,76 +1,71 @@
 from django import forms
 
 class Formulaire(forms.Form):
-	note_globale = forms.FloatField(widget=forms.NumberInput(
+	note_globale = forms.FloatField(min_value=20, max_value=100, widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
-	item_1 = forms.FloatField(widget=forms.NumberInput(
+	item_1 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
-	item_2 = forms.FloatField(widget=forms.NumberInput(
+	item_2 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_2_inv = forms.BooleanField(required=False)
 
-	item_3 = forms.FloatField(widget=forms.NumberInput(
+	item_3 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
-	item_4 = forms.FloatField(widget=forms.NumberInput(
+	item_4 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 	
-	item_4_inv = forms.BooleanField(required=False)
 
-	item_5 = forms.FloatField(widget=forms.NumberInput(
+	item_5 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_6 = forms.FloatField(widget=forms.NumberInput(
+	item_6 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_6_inv = forms.BooleanField(required=False)
-
-	item_7 = forms.FloatField(widget=forms.NumberInput(
+	item_7 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_8 = forms.FloatField(widget=forms.NumberInput(
+	item_8 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_8_inv = forms.BooleanField(required=False)
 
-	item_9 = forms.FloatField(widget=forms.NumberInput(
+	item_9 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_10 = forms.FloatField(widget=forms.NumberInput(
+	item_10 = forms.FloatField(min_value=1, max_value=5,widget=forms.NumberInput(
 		attrs={
 		'class' : 'form-control',
 		}
 		))
 
-	item_10_inv = forms.BooleanField(required=False)
+	item_inv = forms.BooleanField(required=False)
 
