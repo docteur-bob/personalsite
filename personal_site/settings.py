@@ -147,7 +147,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
         os.path.join(PROJECT_ROOT, 'static'),
     )
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'media')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
