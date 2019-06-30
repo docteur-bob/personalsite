@@ -1,2 +1,1 @@
-web: gunicorn book.wsgi
-web: gunicorn SUS.wsgi
+web: gunicorn personal_site.wsgi
