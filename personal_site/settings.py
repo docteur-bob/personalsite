@@ -155,5 +155,5 @@ if os.environ.get('ENV') == 'PRODUCTION':
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Extra places for collectstatic to find static files.
