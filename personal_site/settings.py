@@ -146,6 +146,9 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_DIRS = (
         os.path.join(PROJECT_ROOT, 'static'),
     )
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 if os.environ.get('ENV') == 'PRODUCTION':
     # ...
@@ -154,6 +157,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Extra places for collectstatic to find static files.
