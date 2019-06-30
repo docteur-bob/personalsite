@@ -16,11 +16,9 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-if os.environ.get('ENV') == 'PRODUCTION':
 
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -97,6 +95,11 @@ DATABASES = {
     }
 }
 
+if os.environ.get('ENV') == 'PRODUCTION':
+
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -136,8 +139,6 @@ USE_TZ = True
 if os.environ.get('ENV') == 'PRODUCTION':
 
     # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
     STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
     # Extra places for collectstatic to find static files.
@@ -145,7 +146,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
         os.path.join(PROJECT_ROOT, 'static'),
     )
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
@@ -157,5 +158,5 @@ if os.environ.get('ENV') == 'PRODUCTION':
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 # Extra places for collectstatic to find static files.
