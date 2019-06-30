@@ -16,7 +16,6 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -139,14 +138,15 @@ USE_TZ = True
 if os.environ.get('ENV') == 'PRODUCTION':
 
     # Static files settings
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    
     # Extra places for collectstatic to find static files.
     STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
+        os.path.join(BASE_DIR, 'static'),
     )
 else:
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
@@ -156,7 +156,6 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+
 # Extra places for collectstatic to find static files.
