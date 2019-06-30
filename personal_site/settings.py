@@ -36,7 +36,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ["docteurbob.pythonanywhere.com","localhost","mehdiaoussat.herokuapp.com"]
+ALLOWED_HOSTS = ["docteurbob.pythonanywhere.com","localhost","mehdi-aoussat.herokuapp.com"]
 
 
 # Application definition
