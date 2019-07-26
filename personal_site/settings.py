@@ -12,11 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
-from lib.variables import .
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -27,10 +26,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qy%$ik$by$xqj_(q)*y7)70u60us&1ltontflon+6)$4l3ug^u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = True
+
 
 ALLOWED_HOSTS = ["docteurbob.pythonanywhere.com","localhost","mehdi-aoussat.herokuapp.com"]
 
@@ -58,8 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware'
 ]
 
 
@@ -84,7 +80,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'personal_site.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -94,10 +89,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-if os.environ.get('ENV') == 'PRODUCTION':
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -132,15 +123,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    "/static/"
-]
-
-
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media/book')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static/book')
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+print ("base dir path", BASE_DIR)
+print ("static dir path", STATIC_ROOT)
+print ("media dir path", MEDIA_ROOT)
 
 # Extra places for collectstatic to find static files.
