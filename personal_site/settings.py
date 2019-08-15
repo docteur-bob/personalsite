@@ -25,10 +25,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'qy%$ik$by$xqj_(q)*y7)70u60us&1ltontflon+6)$4l3ug^u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
-ALLOWED_HOSTS = ["docteurbob.pythonanywhere.com","localhost","mehdi-aoussat.herokuapp.com"]
+ALLOWED_HOSTS = ["docteurbob.pythonanywhere.com","localhost"]
 
 
 # Application definition
@@ -89,6 +89,10 @@ DATABASES = {
     }
 }
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -122,14 +126,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media/book')
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static/book')
-
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-print ("base dir path", BASE_DIR)
-print ("static dir path", STATIC_ROOT)
-print ("media dir path", MEDIA_ROOT)
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Extra places for collectstatic to find static files.
